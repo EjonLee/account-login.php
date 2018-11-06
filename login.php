@@ -7,6 +7,7 @@ if(isset($_SESSION['role'])){
     }
     elseif($_SESSION['role']=='guest'){
         header("location:Guest.php");
+        exit();
     }
 }
 ?>
@@ -16,7 +17,7 @@ if(isset($_SESSION['role'])){
 </head>
 <body>
 <form method="post" action="SaveRole.php">
-    <table border="1">
+    <table border="1" align="center">
         <tr>
             <td>您的身份：</td>
             <td>
